@@ -4,5 +4,5 @@ Pillow
 sqlparse
 typing_extensions
 tzdata
-python -m pip install --upgrade pip
+pip install --upgrade pip
 gunicorn
