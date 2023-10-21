@@ -1,0 +1,36 @@
+<style>
+@import url("reset.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #333399, #ff00cc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.abc{
+    background=color:red;
+    border=scale;
+}
+
+
+</style>
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="text-4xl text-gray-900">Create a New Listing</h1>
+<form method="post" action="add/" enctype="multipart/form-data" >
+    {% csrf_token %}
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> 
+    <body>
+        <div class="abc">
+            {{ form.as_p }}
+        </div>
+    </body>
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock %}
